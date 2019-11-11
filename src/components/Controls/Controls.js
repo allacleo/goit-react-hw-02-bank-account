@@ -21,14 +21,13 @@ export default class Controls extends Component {
     handleDeposit = e => {
         e.preventDefault();
         this.props.onDeposit(this.state.inputValue);
-
-
+        this.setState({inputValue: ""});
     };
 
     handleWithdraw = e => {
         e.preventDefault();
         this.props.onWithdraw(this.state.inputValue);
-
+        this.setState({inputValue: ""});
     };
 
     render() {
