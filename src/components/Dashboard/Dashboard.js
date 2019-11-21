@@ -21,25 +21,6 @@ export default class Dashboard extends Component {
         balance: 0,
     };
 
-    componentDidMount() {
-        const transactions = storage.get('transactions');
-        const balance = storage.get('balance');
-        
-        if (transactions && balance) {
-            this.setState({transactions, balance});
-        }
-    
-    }
-    
-    componentDidUpdate(prevProps, prevState) {
-        const {transactions, balance} = this.state;
-    
-        if (prevState. transactions !== transactions) {
-            storage.save('transactions', transactions);
-            storage.save('balance', balance);
-        }
-    };
-
 handleDeposit = amount => {
     if (amount <= 0 || amount === '') {
         toast.info('Введите сумму для проведения операции!');
