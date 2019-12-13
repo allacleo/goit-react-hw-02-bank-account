@@ -32,7 +32,6 @@ handleDeposit = amount => {
             id: shortid.generate(),
             type: 'Deposit',
             amount,
-            date: new Date().toLocaleString(),
         };
         return {
             transactions: [...transactions, transactionItem],
@@ -56,7 +55,6 @@ handleWithdraw = amount => {
             id: shortid.generate(),
             type: 'Withdraw',
             amount,
-            date: new Date().toLocaleString(),
         };
 
         return {
