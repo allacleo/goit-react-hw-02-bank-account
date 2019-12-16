@@ -6,7 +6,7 @@ import Controls from '../Controls/Controls';
 import Balance from '../Balance/Balance';
 import TransactionHistory from '../TransactionHistory/TransactionHistory';
 import style from './Dashboard.module.css';
-import storage from '../../services/storage';
+
 
 toast.configure({
     autoClose: 5000,
